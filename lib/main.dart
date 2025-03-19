@@ -1,3 +1,5 @@
+import 'package:cfp_front/routes/base_route.dart';
+import 'package:cfp_front/utils/config.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,16 +19,13 @@ class MyApp extends StatelessWidget {
   ///
   ///
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Call for Papers',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: false,
-      ),
-      home: Center(
-        child: Text('Olá'),
-      ),
+  Widget build(final BuildContext context) {
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      title: Config().appName,
+      theme: Config().theme,
+      routerConfig: BaseRoute().routes,
+
     );
   }
 }
