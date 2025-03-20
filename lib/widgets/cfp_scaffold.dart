@@ -1,4 +1,4 @@
-import 'package:cfp_front/views/widgets/cfp_drawer.dart';
+import 'package:cfp_front/widgets/cfp_drawer.dart';
 import 'package:flutter/material.dart';
 
 class CfpScaffold extends StatefulWidget {

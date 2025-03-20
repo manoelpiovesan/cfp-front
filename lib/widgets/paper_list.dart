@@ -1,6 +1,6 @@
-import 'package:cfp_front/models/paper_model.dart';
 import 'package:cfp_front/consumers/paper_consumer.dart';
-import 'package:cfp_front/views/widgets/paper_card_widget.dart';
+import 'package:cfp_front/models/paper_model.dart';
+import 'package:cfp_front/widgets/paper_card_widget.dart';
 import 'package:flutter/material.dart';
 
 ///
@@ -66,6 +66,7 @@ class _PaperListState extends State<PaperList> {
                   onSubmitted: (final String value) {
                     setState(() {
                       _search = value;
+                      _page = 0;
                     });
                   },
                 ),
@@ -117,6 +118,13 @@ class _PaperListState extends State<PaperList> {
                 ],
               ),
             ],
+          );
+        }
+
+        /// Empty
+        if(snapshot.data!.isEmpty) {
+          return const Center(
+            child: Text('No data'),
           );
         }
 

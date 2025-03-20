@@ -1,6 +1,7 @@
 import 'package:cfp_front/views/home_view.dart';
+import 'package:cfp_front/views/register_view.dart';
 import 'package:cfp_front/views/submit_paper_view.dart';
-import 'package:cfp_front/views/widgets/cfp_scaffold.dart';
+import 'package:cfp_front/widgets/cfp_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -57,6 +58,21 @@ class BaseRoute {
                     (final BuildContext context, final GoRouterState state) {
                   return NoTransitionPage<SubmitPaperView>(
                     child: SubmitPaperView(
+                      key: state.pageKey,
+                    ),
+                  );
+                },
+              ),
+
+
+              /// Register
+              GoRoute(
+                name: 'register',
+                path: '/register',
+                pageBuilder:
+                    (final BuildContext context, final GoRouterState state) {
+                  return NoTransitionPage<RegisterView>(
+                    child: RegisterView(
                       key: state.pageKey,
                     ),
                   );

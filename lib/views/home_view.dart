@@ -1,4 +1,4 @@
-import 'package:cfp_front/views/widgets/paper_list.dart';
+import 'package:cfp_front/widgets/paper_list.dart';
 import 'package:flutter/material.dart';
 
 ///
